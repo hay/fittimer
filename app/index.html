@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+<!-- _                  _                                             _
+    | |                | |                                           | |
+    | |     __,        | |   ,_    __,   _  _    _   _  _     _  _   | |
+    |/ \   /  |  |   | |/_) /  |  /  |  / |/ |  |/  / |/ |   / |/ |  |/
+    |   |_/\_/|_/ \_/|/| \_/   |_/\_/|_/  |  |_/|__/  |  |_/o  |  |_/|__/
+                    /|
+                    \| -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Facebook tags -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://projects.haykranen.nl/fittimer/">
+    <meta property="og:image" content="http://projects.haykranen.nl/fittimer/img/thumb.jpg">
+    <meta property="og:site_name" content="Hay Kranen">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@hayify">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>fittimer &raquo; Hay Kranen</title>
+</head>
+<body>
+<body>
+    <main v-cloak>
+        <router-view></router-view>
+    </main>
+
+    <script>
+        // Cachebusting for iOS :(
+        var script = document.createElement('script');
+        script.src = 'bundle.js?bust=' + String(Math.random()).slice(2);
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>

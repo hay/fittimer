@@ -1,0 +1,17 @@
+.section {
+    padding: 1rem;
+}
+
+.video-embed {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%; // 9 / 16
+}
+
+.video-embed iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include wh(100%);
+}
