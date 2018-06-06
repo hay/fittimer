@@ -1,15 +1,21 @@
 global:
   introTime: 10
   sounds:
-    - count/1
-    - count/2
-    - count/3
-    - count/4
-    - count/5
-    - count/10
-    - count/20
-    - jump
-    - win
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 10
+    - 20
+    - 30
+    - next-exercise
+    - next-set
+    - pausing
+    - set-complete
+    - set
+    - starting-workout
+    - workout-complete
 workouts:
   - name: Core training, week 1 - 4 (beginner)
     pauseBetweenExercises: 20

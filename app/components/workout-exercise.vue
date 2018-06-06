@@ -8,7 +8,9 @@
 
         <p v-if="exercise.repeat">
             Repeat {{exercise.repeat}} times.
-            {{exercise.pauseBetweenSets}} seconds pause between every set.
+            <span v-if="pauseBetweenSets">
+                {{pauseBetweenSets}} seconds pause between every set.
+            </span>
         </p>
 
         <h3 v-if="message && second">
@@ -46,6 +48,10 @@
 
             message : {
                 type : String
+            },
+
+            pauseBetweenSets : {
+                type : Number
             },
 
             second : {

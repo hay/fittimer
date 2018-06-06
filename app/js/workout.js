@@ -20,6 +20,8 @@ export default class {
 
     addCommandsForExercise(exercise, index) {
         if (index === 0) {
+            this.queue.push({ section : 'starting-workout' });
+
             range(this.introTime, 0).forEach((second) => {
                 this.queue.push({
                     message : `Starting in ${second} seconds`,
@@ -27,6 +29,11 @@ export default class {
                 });
             });
         } else {
+            this.queue.push(
+                { section : 'next-exercise' },
+                { section : 'pausing' }
+            );
+
             range(this.pauseBetweenExercises, 0).forEach((second) => {
                 this.queue.push({
                     message : 'Pausing between exercises',
@@ -36,6 +43,11 @@ export default class {
         }
 
         for (let time = 0; time < exercise.repeat; time++) {
+            this.queue.push(
+                { section : 'set' },
+                { section : time + 1 }
+            );
+
             range(exercise.seconds, 0).forEach((second) => {
                 this.queue.push({
                     message : `Set ${time + 1}`,
@@ -44,6 +56,11 @@ export default class {
             });
 
             if (exercise.repeat > 1 && time !== (exercise.repeat - 1)) {
+                this.queue.push(
+                    { section : 'set-complete' },
+                    { section : 'pausing' }
+                );
+
                 range(this.pauseBetweenSets, 0).forEach((second) => {
                     this.queue.push({
                         message : 'Pausing',

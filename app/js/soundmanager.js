@@ -26,4 +26,16 @@ export default class {
         this._preload();
         this._sounds[id].play();
     }
+
+    playAsync(id) {
+        return new Promise((resolve) => {
+            this._preload();
+
+            this._sounds[id].on('end', () => {
+                resolve();
+            });
+
+            this._sounds[id].play();
+        });
+    }
 }
