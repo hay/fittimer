@@ -24,34 +24,6 @@ export default function(data) {
             if (window.location.href.includes('debug')) {
                 this.$store.commit('debug');
             }
-        },
-
-        computed : {
-            playExercise() {
-                return this.$store.state.playExercise;
-            }
-        },
-
-        watch : {
-            async playExercise(exercise) {
-                if (exercise === -1) {
-                    this.$router.push({
-                        name : 'workout',
-                        params : {
-                            workoutId : this.$store.state.workoutId
-                        }
-                    });
-                } else {
-                    this.$router.push({
-                        name : 'exercise',
-
-                        params : {
-                            exerciseId : exercise,
-                            workoutId : this.$store.state.workoutId
-                        }
-                    });
-                }
-            }
         }
     });
 };
