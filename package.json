@@ -12,7 +12,7 @@
     "build:yaml": "npx js-yaml app/data/data.yaml > app/data/data.json",
     "clean": "rm -rf dist",
     "clean:after": "rm -rf dist/css/scss dist/js",
-    "dist": "npm run clean && webpack -p && cp -rv app dist && npm run clean:after",
+    "dist": "npm run clean && npm run build && webpack -p && cp -rv app dist && npm run clean:after",
     "postinstall": "npm run build",
     "serve": "cd app && http-server",
     "watch:scss" : "chokidar 'app/css/scss/*.scss' -c 'npm run build:css'",
