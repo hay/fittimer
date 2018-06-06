@@ -1,0 +1,19 @@
+global:
+  introTime: 10
+  sounds:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 10
+    - 20
+    - 30
+    - next-exercise
+    - next-set
+    - pausing
+    - set-complete
+    - set
+    - starting-workout
+    - workout-complete
+workouts: []

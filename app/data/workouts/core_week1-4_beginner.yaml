@@ -1,0 +1,43 @@
+name: Core training, week 1 - 4 (beginner)
+pauseBetweenExercises: 20
+pauseBetweenSets: 15
+exercises:
+  - name: Bridge
+    repeat: 3
+    seconds: 10
+    video:
+      youtube: 5ywFJAH8vUc
+  - name: Plank
+    seconds: 30
+    video:
+      youtube: DO8GVaEjIPQ
+  - name: Side plank (left)
+    seconds: 15
+    video:
+      youtube: b5w08J4nWwM
+  - name: Side plank (right)
+    seconds: 15
+    video:
+      youtube: b5w08J4nWwM
+  - name: Bicycle crunch
+    seconds: 20
+    video:
+      youtube: wfZk-8_skX0
+  - name: Leg raise
+    seconds: 6
+    repeat: 2
+    video:
+      youtube: UDn4V4_ysPM
+  - name: Push-ups
+    seconds: 3
+    repeat: 3
+  - name: Leg and arm extension
+    seconds: 8
+    repeat: 3
+    video:
+      youtube: m7ZlSq863UE
+  - name: Superman
+    seconds: 6
+    repeat: 3
+    video:
+      youtube: Vwj2JkoX0HA
